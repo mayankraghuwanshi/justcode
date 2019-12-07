@@ -1,5 +1,5 @@
-import java.math.BigInteger;
 import java.util.*;
+import java.math.*;
 class main{
     // static int add(int a , int b){
     //     if(a==0) return 0;
@@ -27,19 +27,19 @@ class main{
             a=xor;
             count++;
         }
+        System.out.println(a.intValue());
         return count;
     }
     
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        StringBuilder res = new StringBuilder();
-        for(int tc=scn.hasNextInt()?scn.nextInt():0;tc>0;tc--){
+        StringBuilder output = new StringBuilder();
+        for(int tc=scn.hasNextInt()? scn.nextInt():0;tc>0;tc--){
             String s1 = scn.hasNext()?scn.next():"";
-            String s2 = scn.hasNext()?scn.next():"";         
-            // System.out.println("res  "+n1+"\t"+n2);
-            // res.append(add(n1, n2)+"\n");
-            res.append(add(new BigInteger(s1),new BigInteger(s2))+"\n");
+            String s2 = scn.hasNext()?scn.next():"";
+            int res = add(new BigInteger(s1,2),new BigInteger(s2,2));
+            output.append(res+"\n");
         }
-        System.out.println(res);  
+        System.out.println(output);
     }
 }
