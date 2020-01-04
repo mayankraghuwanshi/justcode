@@ -29,9 +29,7 @@ class main{
                         b++;
                     }
                     // System.out.print(count+" ");
-                    if(count>0){
-                        res+=count;
-                    }
+                    res+=count;
                 }
                 // System.out.println();
             }
