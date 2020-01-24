@@ -1,10 +1,12 @@
 import java.util.*;
 class main{
     static void quickSort(int arr[] , int start, int end){
-        if(start>=end) return;
-        int pivote = partition(arr , start , end);
-        quickSort(arr,start,pivote-1);
-        quickSort(arr,pivote+1,end);
+        // if(start>=end) return;
+        if(start<end){
+            int pivote = partition(arr , start , end);
+            quickSort(arr,start,pivote-1);
+            quickSort(arr,pivote+1,end);
+        }
     }
     static int partition(int arr[] , int start , int end){
         int pivote = arr[end];
